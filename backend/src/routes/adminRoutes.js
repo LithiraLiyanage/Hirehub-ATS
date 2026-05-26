@@ -1,0 +1,2 @@
+const r=require('express').Router(),c=require('../controllers/adminController'),{protect,allowRoles}=require('../middleware/authMiddleware');
+r.use(protect,allowRoles('admin'));r.get('/dashboard',c.dashboard);r.get('/users',c.users);r.get('/jobs',c.jobs);r.get('/applications',c.applications);r.put('/users/:id/status',c.toggleUser);r.delete('/users/:id',c.deleteUser);r.delete('/jobs/:id',c.deleteJob);module.exports=r;
