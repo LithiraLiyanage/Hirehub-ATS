@@ -170,9 +170,9 @@ This project was built to demonstrate professional MERN stack development skills
 ---
 
 
-### 🏗️ System Architecture
+## 🏗️ System Architecture
 
-
+```text
 ┌──────────────────────────┐
 │      React Frontend       │
 │   Vite + Tailwind CSS     │
@@ -196,10 +196,9 @@ This project was built to demonstrate professional MERN stack development skills
 
 ---
 
+## 📁 Project Structure
 
-### 📁 Project Structure
-
-
+```text
 hirehub-ats/
 ├── frontend/
 │   ├── src/
@@ -248,7 +247,7 @@ hirehub-ats/
 └── .gitignore
 
 
----
+```
 
 
 ### 👨‍💻 Author
