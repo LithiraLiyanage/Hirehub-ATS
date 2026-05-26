@@ -1,0 +1,1 @@
+export default function EmptyState({title='No data found',message='Nothing to show yet.'}){return <div className='card p-10 text-center'><h3 className='text-lg font-bold'>{title}</h3><p className='mt-2 text-slate-500'>{message}</p></div>}
