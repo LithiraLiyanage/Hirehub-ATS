@@ -1,0 +1,3 @@
+const jwt=require('jsonwebtoken'),User=require('../models/User');
+const protect=async(req,res,next)=>{let token=req.headers.authorization?.startsWith('Bearer')?req.headers.authorization.split(' ')[1]:null;if(!token)return res.status(401).json({message:'Token missing'});try{const d=jwt.verify(token,process.env.JWT_SECRET);req.user=await User.findById(d.id).select('-password');if(!req.user||!req.user.isActive)return res.status(401).json({message:'User disabled/not found'});next();}catch(e){res.status(401).json({message:'Token failed'});}};
+const allowRoles=(...roles)=>(req,res,next)=>!req.user||!roles.includes(req.user.role)?res.status(403).json({message:'Access denied'}):next();module.exports={protect,allowRoles};
