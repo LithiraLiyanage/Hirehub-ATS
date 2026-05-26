@@ -20,8 +20,6 @@
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=4F46E5&height=90&section=header" width="100%" />
-
 </div>
 
 ---
@@ -33,9 +31,6 @@
 <img src="screenshots/Hirehub.PNG" alt="HireHub ATS Project Preview" width="100%" />
 
 </div>
-
-> ⚠️ Make sure the image path is exactly: `screenshots/Hirehub.PNG`  
-> GitHub is case-sensitive, so `Hirehub.PNG`, `hirehub.png`, and `HireHub.PNG` are different file names.
 
 ---
 
