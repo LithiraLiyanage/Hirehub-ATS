@@ -1,0 +1,2 @@
+const r=require('express').Router(),{protect,allowRoles}=require('../middleware/authMiddleware'),upload=require('../middleware/uploadMiddleware'),c=require('../controllers/candidateController');
+r.use(protect,allowRoles('candidate'));r.get('/profile',c.getProfile);r.put('/profile',c.updateProfile);r.post('/upload-resume',upload.single('resume'),c.uploadResume);r.get('/dashboard',c.dashboard);r.get('/applications',c.applications);r.get('/saved-jobs',c.savedJobs);r.post('/save-job/:jobId',c.saveJob);r.delete('/save-job/:jobId',c.removeSavedJob);module.exports=r;
