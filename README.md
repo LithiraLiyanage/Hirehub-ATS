@@ -60,8 +60,4 @@ npm run dev
 Frontend: http://localhost:5173  
 Backend: http://localhost:5000
 
-## 🔑 Admin
-Register using `admin@example.com` to become admin automatically.
 
-## 📌 CV Bullet
-Developed HireHub, a full-stack MERN applicant tracking system with candidate, recruiter, and admin workflows, including job posting, resume uploads, applications, interview scheduling, skill match scoring, dashboards, and role-based access control.
