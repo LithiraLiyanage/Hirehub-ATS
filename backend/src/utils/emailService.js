@@ -1,0 +1,2 @@
+const nodemailer=require('nodemailer');
+module.exports=async({to,subject,html})=>{if(!process.env.EMAIL_HOST||!process.env.EMAIL_USER||!process.env.EMAIL_PASS){console.log('Email skipped:',subject);return;}const t=nodemailer.createTransport({host:process.env.EMAIL_HOST,port:Number(process.env.EMAIL_PORT||587),auth:{user:process.env.EMAIL_USER,pass:process.env.EMAIL_PASS}});await t.sendMail({from:process.env.EMAIL_FROM||'HireHub <noreply@hirehub.com>',to,subject,html});};

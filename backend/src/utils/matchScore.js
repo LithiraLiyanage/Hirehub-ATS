@@ -1,0 +1,2 @@
+const norm=a=>[...new Set((a||[]).map(x=>String(x).trim().toLowerCase()).filter(Boolean))];
+module.exports=(candidateSkills=[],jobSkills=[])=>{const c=norm(candidateSkills),j=norm(jobSkills);if(!j.length)return{matchScore:0,matchedSkills:[],missingSkills:[]};const matchedSkills=j.filter(s=>c.includes(s));const missingSkills=j.filter(s=>!c.includes(s));return{matchScore:Math.round(matchedSkills.length/j.length*100),matchedSkills,missingSkills}};
