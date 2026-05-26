@@ -1,0 +1,2 @@
+const r=require('express').Router(),c=require('../controllers/recruiterController'),{protect,allowRoles}=require('../middleware/authMiddleware');
+r.use(protect,allowRoles('recruiter'));r.get('/profile',c.getProfile);r.put('/profile',c.updateProfile);r.get('/dashboard',c.dashboard);r.get('/jobs',c.recruiterJobs);r.get('/applicants/:jobId',c.applicantsByJob);r.get('/application/:applicationId',c.getApplication);r.put('/application/:applicationId/status',c.updateApplicationStatus);r.post('/application/:applicationId/interview',c.scheduleInterview);module.exports=r;
